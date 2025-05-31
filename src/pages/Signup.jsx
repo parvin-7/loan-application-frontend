@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Form, Button, Container, Row, Col } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 
+const API_URL = import.meta.env.VITE_API_URL;
+
 function Signup() {
     const [formData, setFormData] = useState({
         name: '',
@@ -28,7 +30,7 @@ function Signup() {
         console.log("Form data being sent:", formData);
 
         try {
-            const signupResponse = await fetch('http://localhost:5000/api/auth/signup', {
+            const signupResponse = await fetch(`${API_URL}/api/auth/signup`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(formData),
@@ -146,10 +148,12 @@ function Signup() {
                     </Col>
                 </Row>
 
-                <Button variant="primary" type="submit" className="w-100">Submit</Button>
+                <Button variant="primary" type="submit" className="w-100 mb-3">Submit</Button>
+
+                <p className="text-center">
+                    Already have an account? <Link to="/login">Login here</Link>
+                </p>
             </Form>
-            <br />
-            <Link to="/">Go Back to Home</Link>
         </Container>
     );
 }

@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { Container, Spinner } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 
+const API_URL = import.meta.env.VITE_API_URL;
+
 const LoanForm = () => {
     const userId = localStorage.getItem("userId");
     const token = localStorage.getItem("token");
@@ -20,7 +22,7 @@ const LoanForm = () => {
             try {
                 console.log("Fetching application for userId:", userId);
                 console.log("Using token:", token);
-                const res = await fetch(`http://localhost:5000/api/loan/application/${userId}`, {
+                const res = await fetch(`${API_URL}/api/loan/application/${userId}`, {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },
