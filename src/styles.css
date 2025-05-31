@@ -1,0 +1,96 @@
+
+body {
+    background-color: #f4f7fa; /* Light gray background */
+    font-family: 'Roboto', sans-serif; /* Modern font */
+}
+
+/* Container styling */
+.container {
+    max-width: 900px; /* Limit container width for better readability */
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Form card styling */
+.form-card {
+    background-color: #ffffff; /* White background */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 30px;
+    margin-top: 20px;
+}
+
+/* Heading styling */
+.form-heading {
+    color: #2c3e50; /* Dark blue-gray */
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Button styling */
+.btn-primary {
+    background-color: #1abc9c; /* Teal color */
+    border-color: #1abc9c;
+    padding: 10px 20px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #16a085; /* Darker teal on hover */
+    border-color: #16a085;
+}
+
+/* Link styling */
+.back-link {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: #3498db; /* Blue link color */
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.back-link:hover {
+    color: #2980b9; /* Darker blue on hover */
+    text-decoration: underline;
+}
+
+/* Input field styling */
+.form-control {
+    border-radius: 5px;
+    border: 1px solid #dcdcdc;
+    padding: 10px;
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #1abc9c; /* Teal border on focus */
+    box-shadow: 0 0 5px rgba(26, 188, 156, 0.3); /* Subtle glow */
+}
+
+/* Label styling */
+.form-label {
+    font-weight: 500;
+    color: #34495e; /* Dark gray */
+}
+
+/* Card for LoanForm */
+.application-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-top: 20px;
+}
+
+/* Application details styling */
+.application-details {
+    line-height: 1.6;
+    color: #34495e;
+}
+
+.application-details strong {
+    color: #2c3e50;
+}
