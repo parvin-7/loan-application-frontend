@@ -24,13 +24,13 @@ const Login = () => {
 
             const data = await response.json();
 
-            if (response.ok) { // Check if status code is 200-299
+            if (response.ok) {
                 localStorage.setItem("token", data.token);
                 localStorage.setItem("userId", data.userId);
                 navigate("/application");
             } else {
-                localStorage.removeItem("token"); // Clear token on failure
-                localStorage.removeItem("userId"); // Clear userId on failure
+                localStorage.removeItem("token"); 
+                localStorage.removeItem("userId");
                 alert(data.message || "Invalid credentials!");
             }
         } catch (error) {

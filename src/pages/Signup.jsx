@@ -27,7 +27,7 @@ function Signup() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log("Form data being sent:", formData);
+        // console.log("Form data being sent:", formData);
 
         try {
             const signupResponse = await fetch(`${API_URL}/api/auth/signup`, {

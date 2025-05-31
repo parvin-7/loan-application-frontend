@@ -13,22 +13,22 @@ const LoanForm = () => {
 
     useEffect(() => {
         if (!userId || !token) {
-            console.log("Missing userId or token, redirecting to /login");
+            // console.log("Missing userId or token, redirecting to /login");
             navigate("/login");
             return;
         }
 
         const fetchUserData = async () => {
             try {
-                console.log("Fetching application for userId:", userId);
-                console.log("Using token:", token);
+                // console.log("Fetching application for userId:", userId);
+                // console.log("Using token:", token);
                 const res = await fetch(`${API_URL}/api/loan/application/${userId}`, {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },
                 });
                 const data = await res.json();
-                console.log("API response:", data);
+                // console.log("API response:", data);
                 if (res.ok) {
                     setUserData(data);
                 } else {
